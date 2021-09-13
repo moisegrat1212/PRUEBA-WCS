@@ -7,7 +7,7 @@ using PRUEBA.Entities;
 
 namespace PRUEBA.Models
 {
-    public interface IBancoModel
+    public interface ISolicitudModel
     {
         Dictionary<String, Object> GetSolicitudes();
         Dictionary<String, Object> SendToSolicitud(SendSolicitud sendSolicitud);
@@ -17,9 +17,9 @@ namespace PRUEBA.Models
     }
 
 
-    public class BancoModel : IBancoModel
+    public class SolicitudModel : ISolicitudModel
     {
-        public BancoModel()
+        public SolicitudModel()
         {
 
         }

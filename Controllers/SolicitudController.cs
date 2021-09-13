@@ -23,7 +23,7 @@ namespace PRUEBA.Controllers
         [HttpGet]
         public ActionResult<Object> GetSolicitudes()
         {
-            BancoModel banco = new BancoModel();
+            SolicitudModel banco = new SolicitudModel();
             var item = banco.GetSolicitudes();
             int codRespuesta = Convert.ToInt32(item["codRespuesta"]);
             switch (codRespuesta)
@@ -40,7 +40,7 @@ namespace PRUEBA.Controllers
         [HttpPost]
         public ActionResult<Object> SendToSolicitud([FromBody] SendSolicitud sendSolicitud)
         {
-            BancoModel banco = new BancoModel();
+            SolicitudModel banco = new SolicitudModel();
             var item = banco.SendToSolicitud(sendSolicitud);
             int codRespuesta = Convert.ToInt32(item["codRespuesta"]);
             switch (codRespuesta)
@@ -57,7 +57,7 @@ namespace PRUEBA.Controllers
             [HttpPut]
             public ActionResult<Object> UpdateSolicitud([FromBody] SendSolicitud sendSolicitud)
             {
-                BancoModel banco = new BancoModel();
+                SolicitudModel banco = new SolicitudModel();
                 var item = banco.UpdateSolicitud(sendSolicitud);
                 int codRespuesta = Convert.ToInt32(item["codRespuesta"]);
                 switch (codRespuesta)
@@ -74,7 +74,7 @@ namespace PRUEBA.Controllers
             [HttpDelete]
             public ActionResult<Object> DeleteSolicitud([FromBody] string idSolicitud)
             {
-                BancoModel banco = new BancoModel();
+                SolicitudModel banco = new SolicitudModel();
                 var item = banco.DeleteSolicitud(idSolicitud);
                 int codRespuesta = Convert.ToInt32(item["codRespuesta"]);
                 switch (codRespuesta)
